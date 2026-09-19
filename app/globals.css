@@ -1,0 +1,11 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root { color-scheme: dark; }
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body { margin: 0; background: #1e1e2e; color: #cdd6f4; font-family: var(--font-inter), sans-serif; }
+::selection { background: #89b4fa55; color: #cdd6f4; }
+.grid-bg { background-image: linear-gradient(#cdd6f40b 1px, transparent 1px), linear-gradient(90deg, #cdd6f40b 1px, transparent 1px); background-size: 40px 40px; }
+@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } *, *::before, *::after { animation-duration: .01ms !important; transition-duration: .01ms !important; } }
