@@ -2,8 +2,10 @@
 import Link from "next/link";
 import { ArrowRight, Sparkles } from "lucide-react";
 import { motion } from "framer-motion";
-import Hero3D from "@/components/Hero3D";
+import dynamic from "next/dynamic";
 import HowItWorks from "@/components/HowItWorks";
+
+const Hero3D = dynamic(() => import("@/components/Hero3D"), { ssr: false });
 
 export default function Home() {
   return (
@@ -59,6 +61,7 @@ export default function Home() {
               See how it works
             </a>
           </div>
+          <p className="mt-4 font-mono text-[11px] tracking-wide text-[#9d9dd4]/70">hover the ship, or scroll — it's made of stars</p>
         </motion.div>
       </section>
 
